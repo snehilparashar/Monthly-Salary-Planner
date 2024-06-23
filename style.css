@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 5px 15px;
+    width: 720px;
+}
+
+.salary-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 5px;
+    width: 300px;
+}
+
+.salary-input > label {
+    font-size: 18px;
+}
+
+.salary-input > input {
+    font-size: 17px;
+    border: none;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.salary-input > button {
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+    background-color: #3ca29d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.salary-input > button:hover {
+    background-color: #50c9c3;
+}
+
+.result {
+    display: flex;
+    margin-top: 10px;
+}
+
+.result > div {
+    width: 340px;
+}
+
+.salary-taxes, 
+.monthly-expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: start;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 8px;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group > input {
+    text-align: end;
+    width: 60px;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+
+.savings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.savings > p {
+    font-size: 22px;
+}
+
+#monthlySalary {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#monthlySavings {
+    font-size: 50px;
+}

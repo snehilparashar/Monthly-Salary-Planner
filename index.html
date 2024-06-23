@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Monthly Salary Planner Tool</title>
+
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="main">
+		<div class="container">
+			<h1>Monthly Salary Planner Tool</h1>
+			<p>This tool helps you to have some calculations regarding your monthly salary.
+				<br> This includes taxes and other expenses for the whole month.</p>
+			<div class="salary-input">
+				<label for="salary">Monthly Salary:</label>
+				<input type="text" id="salary" placeholder="Enter your salary here...">
+				<button onclick="calculateSalary()">Calculate</button>
+			</div>
+
+			<div class="result" style="display: none;">
+				<div class="expenses">
+					<div class="salary-taxes">
+						<h3>Monthly Salary Contributions:</h3>
+						<div class="input-group">
+							<label for="MutalFunds">Mutal Funds:</label>
+							<input type="text" id="MutalFunds" readonly>
+						</div>
+						<div class="input-group">
+							<label for="ProfessionalTax">Professional Tax</label>
+							<input type="text" id="ProfessionalTax" readonly>
+						</div>
+						<div class="input-group">
+							<label for="PF">PF (80C):</label>
+							<input type="text" id="PF" readonly>
+						</div>
+						<hr>
+						<h4>Total Monthly Contribution: <span id="totalTax"></span></h4>
+					</div>
+					<div class="monthly-expenses">
+						<h3>Monthly Expenses:</h3>
+						<div class="input-group">
+							<label for="food">Food:</label>
+							<input type="text" id="food" placeholder="0" oninput="updateSavings()">
+						</div>
+						<div class="input-group">
+							<label for="rentBill">Rent and Bill:</label>
+							<input type="text" id="rentBill" placeholder="0" oninput="updateSavings()">
+						</div>
+						<div class="input-group">
+							<label for="monthlyCarLoan">Car Loan:</label>
+							<input type="text" id="monthlyCarLoan" placeholder="0" oninput="updateSavings()">
+						</div>
+						<div class="input-group">
+							<label for="monthlyHouseLoan">House Loan:</label>
+							<input type="text" id="monthlyHouseLoan" placeholder="0" oninput="updateSavings()">
+						</div>
+						<div class="input-group">
+							<label for="otherExpenses">Other Expenses:</label>
+							<input type="text" id="otherExpenses" placeholder="0" oninput="updateSavings()">
+						</div>
+						<hr>
+						<h4>Total Monthly Expenses: <span id="totalExpenses">0</span></h4>
+					</div>
+				</div>
+				<div class="savings">
+					<p>Your Savings to your salary worth <span id="monthlySalary"></span> is <p>
+					<p id="monthlySavings">PHP 0</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Script JS -->
+	<script src="./script.js"></script>
+</body>
+</html>
